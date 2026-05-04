@@ -6,6 +6,33 @@ on:
 
 jobs:
   build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: List schemes
+        run: xcodebuild -list -project Yapomogayu.xcodeproj
+
+      - name: Build (no signing)
+        run: |
+          xcodebuild clean build \
+          -project Yapomogayu.xcodeproj \
+          -scheme Yapomogayu \
+          -sdk iphoneos \
+          CODE_SIGNING_ALLOWED=NO
+name: iOS Build
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
     runs-on: macos-14
 
     steps:
