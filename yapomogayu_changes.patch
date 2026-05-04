@@ -1,0 +1,90 @@
+# YapomogayuV2 Changes - Video Player with Pexels API Integration
+# Apply these changes to your new Xcode project
+
+## Key Files Modified:
+
+### 1. ContentView.swift - Main video player with swipe gestures
+- Added PexelsVideoService integration
+- Implemented vertical video swiping
+- Added share functionality
+- Removed custom video controls
+- Added smooth transitions
+- Removed splash screen
+
+### 2. PexelsVideoService.swift - API integration
+- Fetches charity videos from Pexels API
+- Increased per_page from 20 to 50
+- Added pagination support
+- Portrait video filtering
+- Error handling
+
+### 3. ShareSheet.swift - Share functionality
+- Native iOS share sheet integration
+- Video URL sharing
+
+## Main Features Added:
+
+1. **Video Player:**
+   - Native AVPlayer integration
+   - Vertical swipe navigation
+   - Auto-replay functionality
+   - Portrait video orientation
+   - Smooth transitions
+
+2. **API Integration:**
+   - Pexels API for charity videos
+   - 50 videos per page
+   - Pagination support
+   - Error handling
+
+3. **UI Improvements:**
+   - Share button with proper padding
+   - Loading states
+   - Smooth animations
+   - Tab navigation with swipe gestures
+
+4. **Removed Features:**
+   - Splash screen intro
+   - Custom video controls
+   - TikTok integration
+   - Login system
+
+## Files to Copy:
+
+Essential files:
+- ContentView.swift (main video player)
+- PexelsVideoService.swift (API service)
+- ShareSheet.swift (share functionality)
+- Assets.xcassets (images: ya, go, travel icons)
+
+Optional files:
+- GameManager.swift (gamification)
+- SimpleGamificationView.swift (game interface)
+- LearnView.swift (educational content)
+- OnboardingView.swift (user onboarding)
+
+## Key Changes Summary:
+
+1. **Video Feed:** Replaced TikTok with Pexels API
+2. **Navigation:** Added vertical swipe for videos, horizontal for tabs
+3. **UI:** Removed splash screen, improved share button
+4. **Performance:** Increased videos per page to 50
+5. **Transitions:** Added smooth slide animations
+6. **Sharing:** Native iOS share sheet integration
+
+## Dependencies Required:
+
+- SwiftUI
+- AVKit
+- AVFoundation
+- Combine
+
+## API Key Required:
+
+Update PexelsVideoService.swift with your Pexels API key:
+```swift
+private let apiKey = "YOUR_PEXELS_API_KEY"
+```
+
+Current key: cGzQCYksnQ0n1BV78oEm3xT9iji7JU2OisuU15qujfKzWZgZIF4NNtnv
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>Я помогаю V2</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>yapomogayu.tiktok.auth</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>yapomogayu</string>
+            </array>
+        </dict>
+    </array>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Разрешите сохранять фотографии в вашу библиотеку фотографий</string>
+</dict>
+</plist>
